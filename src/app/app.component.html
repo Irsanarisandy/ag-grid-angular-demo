@@ -3,10 +3,10 @@
                  [columnDefs]="columnDefs"
                  [rowData]="rowData | async"
                  [rowDragManaged]="true"
+                 [rowSelection]="rowSelection"
                  [frameworkComponents]="frameworkComponents"
                  [context]="context"
-                 [loadingOverlayComponent]="loadingOverlayComponent"
-                 [loadingOverlayComponentParams]="loadingOverlayComponentParams"
+                 [sideBar]="sideBar"
                  (gridReady)="onGridReady($event)"
                  (firstDataRendered)="onFirstDataRendered($event)"></ag-grid-angular>
 <router-outlet></router-outlet>

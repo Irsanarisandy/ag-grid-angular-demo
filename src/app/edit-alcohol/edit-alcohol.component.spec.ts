@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AlcoholFullInfoComponent } from './alcohol-full-info.component';
+import { EditAlcoholComponent } from './edit-alcohol.component';
 
-describe('AlcoholFullInfoComponent', () => {
-  let component: AlcoholFullInfoComponent;
-  let fixture: ComponentFixture<AlcoholFullInfoComponent>;
+describe('EditAlcoholComponent', () => {
+  let component: EditAlcoholComponent;
+  let fixture: ComponentFixture<EditAlcoholComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AlcoholFullInfoComponent ]
+      declarations: [ EditAlcoholComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AlcoholFullInfoComponent);
+    fixture = TestBed.createComponent(EditAlcoholComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

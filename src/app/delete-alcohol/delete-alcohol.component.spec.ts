@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AlcoholButtonComponent } from './alcohol-button.component';
+import { DeleteAlcoholComponent } from './delete-alcohol.component';
 
-describe('AlcoholButtonComponent', () => {
-  let component: AlcoholButtonComponent;
-  let fixture: ComponentFixture<AlcoholButtonComponent>;
+describe('DeleteAlcoholComponent', () => {
+  let component: DeleteAlcoholComponent;
+  let fixture: ComponentFixture<DeleteAlcoholComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AlcoholButtonComponent ]
+      declarations: [ DeleteAlcoholComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AlcoholButtonComponent);
+    fixture = TestBed.createComponent(DeleteAlcoholComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

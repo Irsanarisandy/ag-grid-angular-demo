@@ -1,5 +1,5 @@
 interface AlcoholDrink {
-  id: string;
+  id: number;
   name: string;
   thumbnail: string;
   category: string;
