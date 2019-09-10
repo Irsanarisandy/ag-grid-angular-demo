@@ -1,4 +1,4 @@
-<ag-grid-angular #agGrid class="ag-theme-balham grid-demo"
+<ag-grid-angular #agGrid id="gridDemo" class="ag-theme-balham grid-demo"
                  [animateRows]="true"
                  [columnDefs]="columnDefs"
                  [rowData]="rowData | async"
@@ -7,6 +7,8 @@
                  [frameworkComponents]="frameworkComponents"
                  [context]="context"
                  [sideBar]="sideBar"
+                 [popupParent]="popupParent"
+                 [getContextMenuItems]="getContextMenuItems"
                  (gridReady)="onGridReady($event)"
                  (firstDataRendered)="onFirstDataRendered($event)"></ag-grid-angular>
 <router-outlet></router-outlet>

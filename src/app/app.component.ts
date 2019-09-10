@@ -29,6 +29,7 @@ export class AppComponent {
   public frameworkComponents: object;
   public context: object;
   public sideBar: object;
+  public popupParent: HTMLElement;
 
   constructor(private http: HttpClient) {
     this.http.get('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list').subscribe((res: object) => {
@@ -90,7 +91,23 @@ export class AppComponent {
     };
   }
 
+  getContextMenuItems = (params: any) => [
+    {
+      name: 'Delete',
+      action: () => this.deleteAlcohol(),
+      icon: '<i class="ag-icon ag-icon-cut"></i>'
+    },
+    'separator',
+    'copy',
+    'paste',
+    'separator',
+    'export'
+  ]
+
   onGridReady(params: any): void {
+    // set the context menu to be outside of ag-grid for better user experience
+    this.popupParent = document.getElementById('gridDemo').parentElement;
+
     this.gridApi = params.api;
     this.http.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic').subscribe((res1: object) => {
       this.drinks = res1['drinks'].map((item: object) => ({
@@ -132,6 +149,8 @@ export class AppComponent {
   }
 
   deleteAlcohol(): void {
-    this.gridApi.updateRowData({ remove: this.gridApi.getSelectedRows() });
+    let focusedCellIndex = this.gridApi.getFocusedCell().rowIndex;  // get the row index of cell that has clicked element
+    let rowData = this.gridApi.getDisplayedRowAtIndex(focusedCellIndex).data;  // get the data of that row
+    this.gridApi.updateRowData({ remove: [rowData] });  // remove the data from ag-grid
   }
 }
