@@ -6,27 +6,19 @@ import { AgGridModule } from 'ag-grid-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AlcoholImageComponent } from './alcohol-image/alcohol-image.component';
-import { EditAlcoholComponent } from './edit-alcohol/edit-alcohol.component';
-import { DeleteAlcoholComponent } from './delete-alcohol/delete-alcohol.component';
+import { CustomTooltipComponent } from './custom-tooltip/custom-tooltip.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlcoholImageComponent,
-    EditAlcoholComponent,
-    DeleteAlcoholComponent
+    CustomTooltipComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    AgGridModule.withComponents([
-      AlcoholImageComponent,
-      EditAlcoholComponent,
-      DeleteAlcoholComponent
-    ])
+    AgGridModule.withComponents([CustomTooltipComponent])
   ],
   providers: [],
   bootstrap: [AppComponent]
