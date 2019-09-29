@@ -1,0 +1,13 @@
+<ag-grid-angular #agGrid id="gridDemo" class="ag-theme-balham grid-demo"
+                 [animateRows]="true"
+                 [columnDefs]="columnDefs"
+                 [defaultColDef]="defaultColDef"
+                 [frameworkComponents]="frameworkComponents"
+                 [rowData]="rowData | async"
+                 [rowDragManaged]="true"
+                 [rowSelection]="rowSelection"
+                 [sideBar]="sideBar"
+                 [popupParent]="popupParent"
+                 [getContextMenuItems]="getContextMenuItems"
+                 (gridReady)="onGridReady($event)"
+                 (firstDataRendered)="onFirstDataRendered($event)"></ag-grid-angular>

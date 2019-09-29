@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ITooltipAngularComp } from 'ag-grid-angular/dist/interfaces';
+import { AlcoholDrink } from '../data/alcohol-drink';
 
 @Component({
   selector: 'app-custom-tooltip',
@@ -7,7 +8,7 @@ import { ITooltipAngularComp } from 'ag-grid-angular/dist/interfaces';
   styleUrls: ['./custom-tooltip.component.scss']
 })
 export class CustomTooltipComponent implements ITooltipAngularComp {
-  public data: object;
+  public data: AlcoholDrink;
 
   agInit(params: any): void {
     this.data = params.api.getDisplayedRowAtIndex(params.rowIndex).data;

@@ -1,14 +1,7 @@
-<ag-grid-angular #agGrid id="gridDemo" class="ag-theme-balham grid-demo"
-                 [animateRows]="true"
-                 [columnDefs]="columnDefs"
-                 [defaultColDef]="defaultColDef"
-                 [frameworkComponents]="frameworkComponents"
-                 [rowData]="rowData | async"
-                 [rowDragManaged]="true"
-                 [rowSelection]="rowSelection"
-                 [sideBar]="sideBar"
-                 [popupParent]="popupParent"
-                 [getContextMenuItems]="getContextMenuItems"
-                 (gridReady)="onGridReady($event)"
-                 (firstDataRendered)="onFirstDataRendered($event)"></ag-grid-angular>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="d-flex">
+    <a class="nav-link" routerLink="/demo-one" routerLinkActive="active">Demo One</a>
+    <a class="nav-link" routerLink="/demo-two" routerLinkActive="active">Demo Two</a>
+  </div>
+</nav>
 <router-outlet></router-outlet>
